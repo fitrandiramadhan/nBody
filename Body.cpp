@@ -1,4 +1,4 @@
-//file    : body.hpp
+//file    : body.cpp
 //author  : steaKK
 
 #include "Body.hpp"
@@ -30,6 +30,7 @@ Body& Body::operator=(const Body& _Body) {
 }
 
 Body::~Body() {
+  
 }
 
 float Body::get_position_x() {
@@ -44,6 +45,14 @@ float Body::get_mass() {
   return mass;
 }
 
+float Body::get_velocity_x() {
+  return velocity_x;
+}
+
+float Body::get_velocity_y() {
+  return velocity_y;
+}
+
 void Body::set_position_x(int _x) {
   position_x = _x;
 }
@@ -56,3 +65,10 @@ void Body::set_mass(int _m) {
   mass = _m;
 }
 
+void Body::set_velocity_x(int _vx) {
+  velocity_x = _vx;
+}
+
+void Body::set_velocity_y(int _vy) {
+  velocity_y = _vy;
+}
